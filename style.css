@@ -1,0 +1,37 @@
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: white;
+  color: black;
+  transition: all 0.3s ease;
+}
+
+.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.high-contrast {
+  background-color: black;
+  color: yellow;
+}
+
+img.hidden, a.hidden {
+  display: none !important;
+}
+
+a.highlighted {
+  background-color: yellow;
+  color: black;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.cursor-big {
+  cursor: url('https://cur.cursors-4u.net/cursors/cur-11/cur1024.cur'), auto;
+}
+
+/* Tamaño fuente */
+html {
+  font-size: 16px;
+}
