@@ -251,6 +251,11 @@ body {
   color: var(--primary-color);
 }
 
+/* Estilo para cambiar cursor crosshair */
+.custom-cursor {
+  cursor: crosshair !important;
+}
+
 /* Estilos para modo oscuro */
 body.dark-mode {
   --background-color: #121212;
