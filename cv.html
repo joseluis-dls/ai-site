@@ -7,43 +7,130 @@
   <script src="/script.js" defer></script>
 </head>
 <body>
-  <div>
-    <button onclick="increaseFontSize()">A+</button>
-    <button onclick="decreaseFontSize()">A-</button>
-    <button onclick="toggleFont()">Cambiar fuente</button>
-    <button onclick="toggleDarkMode()">Modo oscuro</button>
-    <button onclick="toggleContrast()">Alto contraste</button>
-    <button onclick="toggleCursor()">Cambiar cursor</button>
-    <button onclick="toggleImages()">Quitar imágenes</button>
-    <button onclick="toggleLinks()">Resaltar links</button>
-  </div>
-  
-  <h1>Currículum Vitae</h1>
+    <!-- Barra de accesibilidad -->
+    <div class="accessibility-bar">
+        <button onclick="increaseFontSize()" aria-label="Aumentar tamaño de texto">A+</button>
+        <button onclick="decreaseFontSize()" aria-label="Disminuir tamaño de texto">A-</button>
+        <button onclick="toggleFont()" aria-label="Cambiar tipo de fuente">Fuente</button>
+        <button onclick="toggleDarkMode()" aria-label="Alternar modo oscuro">Modo Oscuro</button>
+        <button onclick="toggleContrast()" aria-label="Alternar alto contraste">Alto Contraste</button>
+        <button onclick="toggleImages()" aria-label="Mostrar/ocultar imágenes">Ocultar Imgs</button>
+        <button onclick="toggleLinks()" aria-label="Resaltar enlaces">Resaltar links</button>
+    </div>
 
-  <nav>
-    <a href="index.html">Inicio</a> |
-    <a href="ia.html">¿Qué es la IA?</a> |
-    <a href="tipos.html">Tipos</a> |
-    <a href="aplicaciones.html">Aplicaciones</a> |
-    <a href="cv.html">Currículum</a> |
-    <a href="contacto.html">Contacto</a>
-  </nav>
+    <!-- Barra de navegación -->
+    <nav class="navbar">
+        <a href="index.html" class="navbar-brand">IA Innovadora</a>
+        <button class="navbar-toggle" aria-expanded="false" aria-label="Menú">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="navbar-menu">
+            <li><a href="index.html" class="active">Inicio</a></li>
+            <li><a href="ia.html">Qué es IA</a></li>
+            <li><a href="tipos.html">Tipos de IA</a></li>
+            <li><a href="aplicaciones.html">Aplicaciones</a></li>
+            <li><a href="cv.html">CV</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
 
-  <!-- Accesibilidad -->
-  <div>
-    <button onclick="increaseFontSize()">A+</button>
-    <button onclick="decreaseFontSize()">A-</button>
-    <button onclick="toggleFont()">Cambiar fuente</button>
-    <button onclick="toggleDarkMode()">Modo oscuro</button>
-    <button onclick="toggleContrast()">Alto contraste</button>
-    <button onclick="toggleCursor()">Cambiar cursor</button>
-    <button onclick="toggleImages()">Quitar imágenes</button>
-    <button onclick="toggleLinks()">Resaltar links</button>
-  </div>
+    <!-- Contenido principal -->
+    <main class="container">
+        <div class="cv-header">
+            <div class="cv-photo">
+                <img src="/images/yo.jpg" alt="José Luis De Los Santos Sandoval">
+            </div>
+            <div class="cv-title">
+                <h1>José Luis De Los Santos Sandoval</h1>
+                <h2>Estudiante de Ingeniería de Software</h2>
+                <div class="cv-contact">
+                    <p>📧 jdelossantos1@ucol.mx</p>
+                    <p>📞 +52 314 103 9917</p>
+                    <p>📍 Manzanillo, Colima, Mx</p>
+                </div>
+            </div>
+        </div>
 
-  <h2>Nombre del estudiante</h2>
-  <p><strong>Formación:</strong> Nombre de la carrera</p>
-  <p><strong>Experiencia:</strong> Breve descripción o prácticas</p>
-  <p><strong>Habilidades:</strong> HTML, CSS, JavaScript, Python...</p>
+        <section class="cv-section">
+            <h2>🔍 Perfil Profesional</h2>
+            <p>Estudiante apasionado de Ingeniería de Software con especial interés en desarrollo de aplicaciones con IA. Experiencia en desarrollo web full-stack y creación de modelos de machine learning básicos. Busco oportunidades para aplicar mis conocimientos en proyectos innovadores.</p>
+        </section>
+
+        <div class="cv-columns">
+            <div class="cv-main">
+                <section class="cv-section">
+                    <h2>📚 Educación</h2>
+                    <div class="cv-item">
+                        <h3>Ingeniería de Software</h3>
+                        <p class="cv-sub">Universidad de Colima (2022-Actualidad)</p>
+                        <ul>
+                            <li>Promedio: 9.28 / 10 </li>
+                            <li>Cursos relevantes: Algoritmos, Estructuras de Datos, IA, Desarrollo Web</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="cv-section">
+                    <h2>💼 Experiencia</h2>
+                    <div class="cv-item">
+                        <h3>Desarrollador Jr. - Practicum</h3>
+                        <p class="cv-sub">Abr 2023 - Presente</p>
+                        <ul>
+                            <li>Desarrollo de aplicaciones web con React y Node.js</li>
+                            <li>Implementación de algoritmos de recomendación básicos</li>
+                            <li>Optimización de rendimiento de aplicaciones</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+
+            <div class="cv-side">
+                <section class="cv-section">
+                    <h2>🛠 Habilidades Técnicas</h2>
+                    <div class="skills">
+                        <div class="skill">
+                            <span>Python</span>
+                            <div class="skill-bar" style="--level: 85%"></div>
+                        </div>
+                        <div class="skill">
+                            <span>JavaScript</span>
+                            <div class="skill-bar" style="--level: 80%"></div>
+                        </div>
+                        <div class="skill">
+                            <span>Machine Learning</span>
+                            <div class="skill-bar" style="--level: 70%"></div>
+                        </div>
+                        <div class="skill">
+                            <span>SQL</span>
+                            <div class="skill-bar" style="--level: 75%"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="cv-section">
+                    <h2>🏆 Proyectos Destacados</h2>
+                    <div class="project">
+                        <h3>Chatbot Académico</h3>
+                        <p>Sistema de respuestas para preguntas frecuentes universitarias usando NLP</p>
+                    </div>
+                    <div class="project">
+                        <h3>Reconocimiento de Emociones</h3>
+                        <p>Modelo CNN para clasificar emociones en imágenes faciales</p>
+                    </div>
+                </section>
+
+                <section class="cv-section">
+                    <h2>🌍 Idiomas</h2>
+                    <ul class="languages">
+                        <li>Español (Nativo)</li>
+                        <li>Inglés (Avanzado)</li>
+                        <li>Francés (Básico)</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </main>
 </body>
 </html>

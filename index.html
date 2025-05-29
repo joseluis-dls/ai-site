@@ -3,27 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IA Innovadora</title>
+    <meta name="description" content="Sitio informativo sobre Inteligencia Artificial">
+    <title>Inteligencia Artificial - Home</title>
     <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Barra de accesibilidad -->
+    <div class="accessibility-bar">
+        <button onclick="increaseFontSize()" aria-label="Aumentar tamaño de texto">A+</button>
+        <button onclick="decreaseFontSize()" aria-label="Disminuir tamaño de texto">A-</button>
+        <button onclick="toggleFont()" aria-label="Cambiar tipo de fuente">Fuente</button>
+        <button onclick="toggleDarkMode()" aria-label="Alternar modo oscuro">Modo Oscuro</button>
+        <button onclick="toggleContrast()" aria-label="Alternar alto contraste">Alto Contraste</button>
+        <button onclick="toggleImages()" aria-label="Mostrar/ocultar imágenes">Ocultar Imgs</button>
+        <button onclick="toggleLinks()" aria-label="Resaltar enlaces">Resaltar links</button>
+    </div>
+
+    <!-- Barra de navegación -->
     <nav class="navbar">
-        <a href="#" class="navbar-brand">IA Innovadora</a>
+        <a href="index.html" class="navbar-brand">Inteligencia Artificial</a>
+        <button class="navbar-toggle" aria-expanded="false" aria-label="Menú">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
         <ul class="navbar-menu">
-            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.html" class="active">Inicio</a></li>
             <li><a href="ia.html">Qué es IA</a></li>
-            <li><a href="tipos.html">Tipos</a></li>
+            <li><a href="tipos.html">Tipos de IA</a></li>
             <li><a href="aplicaciones.html">Aplicaciones</a></li>
             <li><a href="cv.html">CV</a></li>
             <li><a href="contacto.html">Contacto</a></li>
         </ul>
     </nav>
 
+    <!-- Contenido principal -->
     <main class="container">
-        <h1>Bienvenido a IA Innovadora</h1>
-        <p>Explora el fascinante mundo de la inteligencia artificial.</p>
+        <header class="hero">
+            <h1>Revolución Artificial: El Futuro es Ahora</h1>
+            <p>Descubre cómo la IA está transformando cada aspecto de nuestra sociedad, desde la medicina hasta el arte</p>
+            <a href="ia.html" class="btn">Explorar el Mundo IA</a>
+        </header>
+
+        <section class="features">
+            <article class="feature-card">
+                <div class="feature-icon">🧠</div>
+                <h2>El Cerebro Digital</h2>
+                <p>Descubre cómo funcionan las redes neuronales y el aprendizaje automático que imitan la mente humana</p>
+                <a href="ia.html" class="btn">Ver Explicación</a>
+            </article>
+            <article class="feature-card">
+                <div class="feature-icon">🤖</div>
+                <h2>Robots que Aprenden</h2>
+                <p>Conoce los últimos avances en robótica inteligente que están cambiando la industria manufacturera</p>
+                <a href="aplicaciones.html" class="btn">Ver Robots</a>
+            </article>
+            <article class="feature-card">
+                <div class="feature-icon">💡</div>
+                <h2>IA Generativa</h2>
+                <p>Explora cómo herramientas como ChatGPT y DALL-E están revolucionando la creatividad</p>
+                <a href="tipos.html" class="btn">Descubrir</a>
+            </article>
+        </section>
+
+        <section class="latest-articles">
+            <h2>Últimos Avances en IA</h2>
+            <div class="article-grid">
+                <article class="article-card">
+                    <img src="/images/ia-medicina.jpg" alt="IA en medicina" class="article-img">
+                    <h3>Diagnósticos con 99% de precisión</h3>
+                    <p>Los nuevos algoritmos de IBM Watson Health pueden detectar cáncer con mayor exactitud que médicos humanos</p>
+                </article>
+                <article class="article-card">
+                    <img src="/images/ia-med.png" alt="IA en arte" class="article-img">
+                    <h3>El arte del algoritmo</h3>
+                    <p>Cómo MidJourney y Stable Diffusion están redefiniendo la creación artística</p>
+                </article>
+                <article class="article-card">
+                    <img src="/images/ia-art.png" alt="IA en educación" class="article-img">
+                    <h3>Educación personalizada</h3>
+                    <p>Plataformas adaptativas que modifican su enseñanza según las necesidades de cada estudiante</p>
+                </article>
+            </div>
+        </section>
     </main>
 
-    <script src="/script.js"></script>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>IA Innovadora</h3>
+                <p>Tu fuente confiable de información sobre Inteligencia Artificial</p>
+            </div>
+            <div class="footer-section">
+                <h3>Enlaces rápidos</h3>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="ia.html">Qué es IA</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p>info@iainnovadora.com</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Twitter">🐦</a>
+                    <a href="#" aria-label="LinkedIn">🔗</a>
+                    <a href="#" aria-label="GitHub">💻</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 IA Innovadora. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+<script src="/script.js"></script>
 </body>
 </html>

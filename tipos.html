@@ -1,50 +1,61 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Tipos de IA</title>
-  <link rel="stylesheet" href="/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tipos de Inteligencia Artificial</title>
+  <link rel="stylesheet" href="/style.css" />
   <script src="/script.js" defer></script>
 </head>
 <body>
-  <div>
-    <button onclick="increaseFontSize()">A+</button>
-    <button onclick="decreaseFontSize()">A-</button>
-    <button onclick="toggleFont()">Cambiar fuente</button>
-    <button onclick="toggleDarkMode()">Modo oscuro</button>
-    <button onclick="toggleContrast()">Alto contraste</button>
-    <button onclick="toggleCursor()">Cambiar cursor</button>
-    <button onclick="toggleImages()">Quitar imágenes</button>
-    <button onclick="toggleLinks()">Resaltar links</button>
+  <!-- Barra de accesibilidad -->
+  <div class="accessibility-bar">
+    <button onclick="increaseFontSize()" aria-label="Aumentar tamaño de texto">A+</button>
+    <button onclick="decreaseFontSize()" aria-label="Disminuir tamaño de texto">A-</button>
+    <button onclick="toggleFont()" aria-label="Cambiar tipo de fuente">Fuente</button>
+    <button onclick="toggleDarkMode()" aria-label="Alternar modo oscuro">Modo Oscuro</button>
+    <button onclick="toggleContrast()" aria-label="Alternar alto contraste">Alto Contraste</button>
+    <button onclick="toggleImages()" aria-label="Mostrar/ocultar imágenes">Ocultar Imgs</button>
+    <button onclick="toggleLinks()" aria-label="Resaltar enlaces">Resaltar links</button>
   </div>
-  
-  <h1>Tipos de Inteligencia Artificial</h1>
 
-  <nav>
-    <a href="index.html">Inicio</a> |
-    <a href="ia.html">¿Qué es la IA?</a> |
-    <a href="tipos.html">Tipos</a> |
-    <a href="aplicaciones.html">Aplicaciones</a> |
-    <a href="cv.html">Currículum</a> |
-    <a href="contacto.html">Contacto</a>
+  <!-- Barra de navegación -->
+  <nav class="navbar">
+    <a href="index.html" class="navbar-brand">IA Innovadora</a>
+    <button class="navbar-toggle" aria-expanded="false" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="navbar-menu">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="ia.html">Qué es IA</a></li>
+      <li><a href="tipos.html" class="active">Tipos de IA</a></li>
+      <li><a href="aplicaciones.html">Aplicaciones</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
   </nav>
 
-  <!-- Accesibilidad -->
-  <div>
-    <button onclick="increaseFontSize()">A+</button>
-    <button onclick="decreaseFontSize()">A-</button>
-    <button onclick="toggleFont()">Cambiar fuente</button>
-    <button onclick="toggleDarkMode()">Modo oscuro</button>
-    <button onclick="toggleContrast()">Alto contraste</button>
-    <button onclick="toggleCursor()">Cambiar cursor</button>
-    <button onclick="toggleImages()">Quitar imágenes</button>
-    <button onclick="toggleLinks()">Resaltar links</button>
-  </div>
+  <main class="container">
+    <h1>Tipos de Inteligencia Artificial</h1>
+    
+    <section>
+      <h2>Clasificación según capacidades</h2>
+      <ul class="info-list">
+        <li><strong>IA Débil (Narrow AI):</strong> Especializada en tareas específicas, sin consciencia ni entendimiento general. Ejemplo: asistentes virtuales como Siri o Alexa.</li>
+        <li><strong>IA General (AGI):</strong> Inteligencia capaz de realizar cualquier tarea intelectual humana. Aún en desarrollo.</li>
+        <li><strong>IA Superinteligente:</strong> Una inteligencia que supera a la humana en todas las áreas cognitivas. Actualmente un concepto teórico.</li>
+      </ul>
+    </section>
 
-  <ul>
-    <li><strong>IA débil:</strong> Especializada en una sola tarea. Ej: asistentes virtuales.</li>
-    <li><strong>IA fuerte:</strong> Tiene capacidades cognitivas similares a las humanas.</li>
-    <li><strong>IA general:</strong> Puede realizar cualquier tarea intelectual que un humano pueda hacer (todavía en desarrollo).</li>
-  </ul>
+    <section>
+      <h2>Clasificación según funcionalidad</h2>
+      <ul class="info-list">
+        <li><strong>Reactiva:</strong> No tiene memoria ni experiencia previa, responde solo al presente.</li>
+        <li><strong>Memoria limitada:</strong> Puede aprender de experiencias pasadas para mejorar.</li>
+        <li><strong>Teoría de la mente:</strong> Entiende emociones y pensamientos humanos (fase experimental).</li>
+        <li><strong>Autoconsciente:</strong> Posee consciencia propia (hipotético).</li>
+      </ul>
+    </section>
+  </main>
 </body>
 </html>

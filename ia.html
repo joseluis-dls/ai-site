@@ -3,44 +3,95 @@
 <head>
   <meta charset="UTF-8">
   <title>¿Qué es la IA?</title>
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="/style.css">
   <script src="/script.js" defer></script>
 </head>
 <body>
-    <div>
-    <button onclick="increaseFontSize()">A+</button>
-    <button onclick="decreaseFontSize()">A-</button>
-    <button onclick="toggleFont()">Cambiar fuente</button>
-    <button onclick="toggleDarkMode()">Modo oscuro</button>
-    <button onclick="toggleContrast()">Alto contraste</button>
-    <button onclick="toggleCursor()">Cambiar cursor</button>
-    <button onclick="toggleImages()">Quitar imágenes</button>
-    <button onclick="toggleLinks()">Resaltar links</button>
-  </div>
+    <!-- Barra de accesibilidad -->
+    <div class="accessibility-bar">
+        <button onclick="increaseFontSize()" aria-label="Aumentar tamaño de texto">A+</button>
+        <button onclick="decreaseFontSize()" aria-label="Disminuir tamaño de texto">A-</button>
+        <button onclick="toggleFont()" aria-label="Cambiar tipo de fuente">Fuente</button>
+        <button onclick="toggleDarkMode()" aria-label="Alternar modo oscuro">Modo Oscuro</button>
+        <button onclick="toggleContrast()" aria-label="Alternar alto contraste">Alto Contraste</button>
+        <button onclick="toggleImages()" aria-label="Mostrar/ocultar imágenes">Ocultar Imgs</button>
+        <button onclick="toggleLinks()" aria-label="Resaltar enlaces">Resaltar links</button>
+    </div>
 
-  <h1>¿Qué es la Inteligencia Artificial?</h1>
+    <!-- Barra de navegación -->
+    <nav class="navbar">
+        <a href="index.html" class="navbar-brand">IA Innovadora</a>
+        <button class="navbar-toggle" aria-expanded="false" aria-label="Menú">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="navbar-menu">
+            <li><a href="index.html" class="active">Inicio</a></li>
+            <li><a href="ia.html">Qué es IA</a></li>
+            <li><a href="tipos.html">Tipos de IA</a></li>
+            <li><a href="aplicaciones.html">Aplicaciones</a></li>
+            <li><a href="cv.html">CV</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
 
-  <nav>
-    <a href="index.html">Inicio</a> |
-    <a href="ia.html">¿Qué es la IA?</a> |
-    <a href="tipos.html">Tipos</a> |
-    <a href="aplicaciones.html">Aplicaciones</a> |
-    <a href="cv.html">Currículum</a> |
-    <a href="contacto.html">Contacto</a>
-  </nav>
+    <!-- Contenido principal -->
+    <main class="container">
+        <article class="content-article">
+            <h1>Inteligencia Artificial: Más Allá de la Ciencia Ficción</h1>
+            
+            <section class="article-section">
+                <h2>¿Qué es realmente la IA?</h2>
+                <p>La Inteligencia Artificial es la simulación de procesos de inteligencia humana por parte de máquinas, especialmente sistemas informáticos. Estos procesos incluyen el aprendizaje, el razonamiento y la autocorrección.</p>
+                <div class="comparison">
+                    <div class="comparison-item">
+                        <h3>IA Estrecha (ANI)</h3>
+                        <p>Diseñada para tareas específicas (ej: reconocimiento facial)</p>
+                    </div>
+                    <div class="comparison-item">
+                        <h3>IA General (AGI)</h3>
+                        <p>Capacidad intelectual similar a humanos (aún teórica)</p>
+                    </div>
+                </div>
+            </section>
 
-  <!-- Accesibilidad -->
-  <div>
-    <button onclick="increaseFontSize()">A+</button>
-    <button onclick="decreaseFontSize()">A-</button>
-    <button onclick="toggleFont()">Cambiar fuente</button>
-    <button onclick="toggleDarkMode()">Modo oscuro</button>
-    <button onclick="toggleContrast()">Alto contraste</button>
-    <button onclick="toggleCursor()">Cambiar cursor</button>
-    <button onclick="toggleImages()">Quitar imágenes</button>
-    <button onclick="toggleLinks()">Resaltar links</button>
-  </div>
+            <section class="article-section">
+                <h2>Breve Historia de la IA</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-year">1950</div>
+                        <div class="timeline-content">Alan Turing propone el Test de Turing</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">1997</div>
+                        <div class="timeline-content">Deep Blue vence a Kasparov en ajedrez</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2023</div>
+                        <div class="timeline-content">ChatGPT democratiza el acceso a IA conversacional</div>
+                    </div>
+                </div>
+            </section>
 
-  <p>La Inteligencia Artificial (IA) es una rama de la informática que se enfoca en crear sistemas capaces de realizar tareas que normalmente requieren inteligencia humana, como el reconocimiento de voz, toma de decisiones o traducción automática.</p>
+            <section class="article-section">
+                <h2>Conceptos Clave</h2>
+                <div class="concept-cards">
+                    <div class="concept-card">
+                        <h3>Machine Learning</h3>
+                        <p>Algoritmos que mejoran automáticamente a través de la experiencia</p>
+                    </div>
+                    <div class="concept-card">
+                        <h3>Redes Neuronales</h3>
+                        <p>Sistemas inspirados en el cerebro humano para reconocer patrones</p>
+                    </div>
+                    <div class="concept-card">
+                        <h3>Procesamiento de Lenguaje Natural</h3>
+                        <p>Cómo las máquinas entienden e interpretan el lenguaje humano</p>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
 </body>
 </html>

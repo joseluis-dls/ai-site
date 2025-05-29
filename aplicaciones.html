@@ -1,53 +1,69 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Aplicaciones de la IA</title>
-  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/style.css" />
   <script src="/script.js" defer></script>
 </head>
 <body>
-  <div>
-    <button onclick="increaseFontSize()">A+</button>
-    <button onclick="decreaseFontSize()">A-</button>
-    <button onclick="toggleFont()">Cambiar fuente</button>
-    <button onclick="toggleDarkMode()">Modo oscuro</button>
-    <button onclick="toggleContrast()">Alto contraste</button>
-    <button onclick="toggleCursor()">Cambiar cursor</button>
-    <button onclick="toggleImages()">Quitar imágenes</button>
-    <button onclick="toggleLinks()">Resaltar links</button>
+  <!-- Barra de accesibilidad -->
+  <div class="accessibility-bar">
+    <button onclick="increaseFontSize()" aria-label="Aumentar tamaño de texto">A+</button>
+    <button onclick="decreaseFontSize()" aria-label="Disminuir tamaño de texto">A-</button>
+    <button onclick="toggleFont()" aria-label="Cambiar tipo de fuente">Fuente</button>
+    <button onclick="toggleDarkMode()" aria-label="Alternar modo oscuro">Modo Oscuro</button>
+    <button onclick="toggleContrast()" aria-label="Alternar alto contraste">Alto Contraste</button>
+    <button onclick="toggleImages()" aria-label="Mostrar/ocultar imágenes">Ocultar Imgs</button>
+    <button onclick="toggleLinks()" aria-label="Resaltar enlaces">Resaltar links</button>
   </div>
-  
-  <h1>Aplicaciones de la Inteligencia Artificial</h1>
 
-  <nav>
-    <a href="index.html">Inicio</a> |
-    <a href="ia.html">¿Qué es la IA?</a> |
-    <a href="tipos.html">Tipos</a> |
-    <a href="aplicaciones.html">Aplicaciones</a> |
-    <a href="cv.html">Currículum</a> |
-    <a href="contacto.html">Contacto</a>
+  <!-- Barra de navegación -->
+  <nav class="navbar">
+    <a href="index.html" class="navbar-brand">IA Innovadora</a>
+    <button class="navbar-toggle" aria-expanded="false" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="navbar-menu">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="ia.html">Qué es IA</a></li>
+      <li><a href="tipos.html">Tipos de IA</a></li>
+      <li><a href="aplicaciones.html" class="active">Aplicaciones</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
   </nav>
 
-  <!-- Accesibilidad -->
-  <div>
-    <button onclick="increaseFontSize()">A+</button>
-    <button onclick="decreaseFontSize()">A-</button>
-    <button onclick="toggleFont()">Cambiar fuente</button>
-    <button onclick="toggleDarkMode()">Modo oscuro</button>
-    <button onclick="toggleContrast()">Alto contraste</button>
-    <button onclick="toggleCursor()">Cambiar cursor</button>
-    <button onclick="toggleImages()">Quitar imágenes</button>
-    <button onclick="toggleLinks()">Resaltar links</button>
-  </div>
+  <main class="container">
+    <h1>Aplicaciones de la Inteligencia Artificial</h1>
 
-  <p>La IA se aplica en diversas áreas como:</p>
-  <ul>
-    <li>Medicina (diagnóstico asistido)</li>
-    <li>Transporte (autos autónomos)</li>
-    <li>Educación (tutores inteligentes)</li>
-    <li>Industria (automatización)</li>
-    <li>Finanzas (análisis predictivo)</li>
-  </ul>
+    <p>La inteligencia artificial está transformando múltiples sectores, optimizando procesos y mejorando la calidad de vida.</p>
+
+    <section>
+      <h2>Salud</h2>
+      <p>Diagnóstico asistido por IA, análisis de imágenes médicas, detección temprana de enfermedades y medicina personalizada.</p>
+    </section>
+
+    <section>
+      <h2>Transporte</h2>
+      <p>Autos autónomos, gestión inteligente del tráfico, sistemas avanzados de navegación y mantenimiento predictivo.</p>
+    </section>
+
+    <section>
+      <h2>Educación</h2>
+      <p>Tutores inteligentes, plataformas personalizadas de aprendizaje y análisis del desempeño estudiantil.</p>
+    </section>
+
+    <section>
+      <h2>Industria</h2>
+      <p>Automatización de procesos, robots inteligentes, control de calidad y optimización logística.</p>
+    </section>
+
+    <section>
+      <h2>Finanzas</h2>
+      <p>Detección de fraudes, análisis predictivo de riesgos, asesoría automatizada y gestión de inversiones.</p>
+    </section>
+  </main>
 </body>
 </html>
