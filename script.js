@@ -10,16 +10,17 @@ let linksHighlighted = false;
 // Funciones de accesibilidad
 function increaseFontSize() {
     if (currentFontSize < 3) {
+        document.body.classList.remove(`large-text-${currentFontSize}`);
         currentFontSize++;
-        document.body.classList.remove('large-text-1', 'large-text-2', 'large-text-3');
         document.body.classList.add(`large-text-${currentFontSize}`);
     }
 }
 
 function decreaseFontSize() {
-    if (currentFontSize > 0) {
+    if (currentFontSize > -3) {
         document.body.classList.remove(`large-text-${currentFontSize}`);
         currentFontSize--;
+        document.body.classList.add(`large-text-${currentFontSize}`);
     }
 }
 
@@ -88,4 +89,26 @@ document.addEventListener('DOMContentLoaded', function() {
             link.classList.add('active');
         }
     });
+});
+
+document.getElementById("reset-styles-btn").addEventListener("click", function () {
+  const body = document.body;
+
+  // Remueve clases relacionadas a accesibilidad
+  body.classList.remove(
+    "dark-mode",
+    "high-contrast",
+    "mono-font",
+    "hide-images",
+    "highlight-links",
+    "custom-cursor"
+  );
+
+  // Remueve clases de tamaño de fuente (desde -3 hasta +3)
+  for (let i = -3; i <= 3; i++) {
+    if (i !== 0) body.classList.remove(`large-text-${i}`);
+  }
+
+  // Reinicia el contador de tamaño de fuente si lo usas
+  currentFontSize = 0;
 });

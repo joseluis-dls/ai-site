@@ -62,6 +62,14 @@ body {
   transform: translateY(-1px);
 }
 
+#reset-styles-btn {
+  background-color: #0b4f6c; /* azul más fuerte */
+}
+
+#reset-styles-btn:hover {
+  background-color: #083f54;
+}
+
 /* Barra de navegación */
 .navbar {
   position: fixed;
@@ -319,6 +327,10 @@ body.high-contrast button:hover {
 body.large-text-1 { font-size: 18px; }
 body.large-text-2 { font-size: 20px; }
 body.large-text-3 { font-size: 22px; }
+
+body.large-text--1 { font-size: 14px; }
+body.large-text--2 { font-size: 13px; }
+body.large-text--3 { font-size: 12px; }
 
 /* Estilos para fuente monoespaciada */
 body.mono-font {
