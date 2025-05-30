@@ -42,19 +42,23 @@
     <h1>Contacto</h1>
     <p>¿Tienes alguna duda o comentario? Envíanos un mensaje.</p>
 
-    <form action="https://formspree.io/f/xrbqnddv" method="POST" class="contact-form" id="contactForm">
-      <label for="name">Nombre:</label>
-      <input type="text" id="name" name="name" required aria-required="true" placeholder="Tu nombre" />
+    <form id="contact-form" onsubmit="return validateForm()" action="https://formspree.io/f/xrbqnddv" method="POST">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required>
 
       <label for="email">Correo electrónico:</label>
-      <input type="email" id="email" name="_replyto" required aria-required="true" placeholder="tu@email.com" />
+      <input type="email" id="email" name="email" required>
 
-      <label for="message">Mensaje:</label>
-      <textarea id="message" name="message" required aria-required="true" placeholder="..."></textarea>
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" name="mensaje" required></textarea>
+
+      <label for="verificacion">¿Cuánto es 2 + 3?</label>
+      <input type="text" id="verificacion" name="verificacion" required>
 
       <button type="submit">Enviar</button>
-    </form>
 
+      <p class="form-note">* La información será enviada por correo sin cifrado. No incluya datos sensibles.</p>
+    </form>
     <div id="formResponse" role="alert" aria-live="polite" style="margin-top:1em;"></div>
   </main>
 

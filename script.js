@@ -75,6 +75,16 @@ function toggleLinks() {
     }
 }
 
+// Validación antibots
+function validateForm() {
+  const answer = document.getElementById('verificacion').value.trim();
+  if (answer !== '5') {
+    alert('Respuesta incorrecta a la pregunta de verificación.');
+    return false;
+  }
+  return true;
+}
+
 // Navegación responsive
 document.querySelector('.navbar-toggle')?.addEventListener('click', function() {
     this.classList.toggle('active');
